@@ -1,0 +1,59 @@
+{
+  "themes": [
+    {
+      "id": "d5tpt8dpq",
+      "name": "样式1",
+      "type": "normal",
+      "children": [
+        {
+          "id": "59kgauzki",
+          "type": "JsFile",
+          "attrs": {
+            "sourceEnabled": false,
+            "valueStart": 0,
+            "valueEnd": 0,
+            "angleStart": 0,
+            "angleEnd": 360,
+            "recolorEnable": true,
+            "x": 0,
+            "y": 0,
+            "w": 336,
+            "h": 480,
+            "rotation": 0,
+            "name": "JS/LUA程序1",
+            "showImgFormat": false,
+            "_visibility": true,
+            "_isLocked": false,
+            "temperatureUnitType": "celsius",
+            "jsFilename": "_lua/_Lua/main.lua",
+            "jsImgNames": [
+              "_lua/_Lua/shellpp_ii-3.101.036.bin",
+              "_lua/_Lua/shellpp_ii-3.101.043.bin",
+              "_lua/_Lua/shellpp_ii_icon.bin",
+              "_lua/_Lua/shellpp_ii_settings_icon.bin"
+            ],
+            "fileRef": "layout引用"
+          }
+        }
+      ],
+      "bgColor": "#000000",
+      "colorGroupTable": [
+        {
+          "id": "ki7rz525f",
+          "name": "配色1",
+          "color": "#ffffff"
+        }
+      ],
+      "preview": "_preview/样式1亮屏预览图.png"
+    }
+  ],
+  "i18n": {
+    "translations": {},
+    "locales": []
+  },
+  "introData": {},
+  "aodDisplayMode": "single",
+  "formats": {},
+  "dataSource": {},
+  "isSlotFollowing": false
+}

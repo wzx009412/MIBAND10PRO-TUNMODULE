@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Watchface name="tunboot" width="336" height="480" id="000000000000" SKU="false" compressMethod="RLEReversed" advanced="false" interactive="false" support_literal="false" editable="false">
+    <Resources>
+        <Image name="Image1" src="_preview/样式1亮屏预览图.png" compressMethod="RLEReversed" format="indexed8"/>
+        <File fileName="_lua/_Lua/main.lua" name="_lua/_Lua/main.lua"/>
+        <File fileName="_lua/_Lua/shellpp_ii-3.101.036.bin" name="_lua/_Lua/shellpp_ii-3.101.036.bin"/>
+        <File fileName="_lua/_Lua/shellpp_ii-3.101.043.bin" name="_lua/_Lua/shellpp_ii-3.101.043.bin"/>
+        <File fileName="_lua/_Lua/shellpp_ii_icon.bin" name="_lua/_Lua/shellpp_ii_icon.bin"/>
+        <File fileName="_lua/_Lua/shellpp_ii_settings_icon.bin" name="_lua/_Lua/shellpp_ii_settings_icon.bin"/>
+    </Resources>
+    <Theme type="normal" name="样式1" bgColor="#000000" isPhotoAlbumWatchface="false" preview="@Image1">
+        <Layout ref="@_lua/_Lua/main.lua" x="0" y="0"/>
+    </Theme>
+</Watchface>

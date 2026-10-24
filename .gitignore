@@ -1,0 +1,20 @@
+# 构建产物
+out/
+build/
+*.o
+*.elf
+*.bin.tmp
+__pycache__/
+*.pyc
+lua_err.txt
+
+# 运行期日志 / 抓包（体积大且含个人信息）
+*.log
+*.pcap
+*.pcapng
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,30 @@
+# 默认按文本处理，签出一律 LF —— Lua 源是逐字节进包里的，CRLF 会改变产物 md5
+* text=auto eol=lf
+
+*.lua   text eol=lf
+*.sh    text eol=lf
+*.md    text eol=lf
+*.py    text eol=lf
+*.c     text eol=lf
+*.h     text eol=lf
+*.json  text eol=lf
+*.xml   text eol=lf
+*.ld    text eol=lf
+
+# 二进制：不要碰
+*.bin   binary
+*.face  binary
+*.elf   binary
+*.png   binary
+
+# ★ 这三个文件的**字节**是构建输入（hashCode = sha256(capability.json + manifest.xml + resource.bin)），
+#    原文件本身是 CRLF，绝不能让 git 规范化 —— 否则别人克隆后打出来的包 md5 就不一样。
+face/capability.json    -text
+face/editor.config.json -text
+face/uidmap.map         -text
+
+# ★ 这三个文件的**字节**是构建输入（hashCode = sha256(capability.json + manifest.xml + resource.bin)），
+#    原文件本身是 CRLF，绝不能让 git 规范化 —— 否则别人克隆后打出来的包 md5 就不一样。
+face/capability.json    -text
+face/editor.config.json -text
+face/uidmap.map         -text
