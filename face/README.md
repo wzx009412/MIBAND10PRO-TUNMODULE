@@ -25,12 +25,27 @@
 
 ```bash
 PY="C:/Users/Administrator/.workbuddy/binaries/python/envs/default/Scripts/python.exe"
+
+$PY tools/_pack_blob.py                   # 从零件拼资源槽位（校验每段长度+md5）
 $PY tools/_sim_rc.py                      # 离线行为门 19 条
-$PY tools/pack_mwz.py --out ../dist/tunboot_cert.face   # 打包 + 19 条结构门
 $PY tools/_rebuild_resource.py            # 改完 _Lua/ 后重建 resource.bin
+$PY tools/pack_mwz.py --out ../dist/tunboot_cert.face   # 打包 + 19 条结构门
 ```
 
-改完 `_Lua/main.lua` 后记得 `cp _Lua/main.lua resources/_lua/_Lua/main.lua` 再 `_rebuild_resource.py`。
+## 从零重建整条链
+
+```bash
+python modules/tun/build.py               # → modules/tun/build/tun-3.101.043.bin
+python modules/capatch/build_capatch.py   # → modules/capatch/capatch.elf
+python face/tools/_pack_blob.py           # 拼 _Lua/shellpp_*.bin
+cp face/_Lua/main.lua face/resources/_lua/_Lua/main.lua
+python face/tools/_rebuild_resource.py
+python face/tools/pack_mwz.py --out face/../dist/tunboot_cert.face
+```
+
+`_pack_blob.py` 的四段来源：`--tun`（build.py 产物）、旧 CA 段（默认从现有槽位抠）、
+`--capatch`、`--pem`（默认 `assets/ca.pem`，4,038 B 证书链）。
+任一段长度或 md5 与 `main.lua` 常量不符 ⇒ **一个字节都不写**。
 
 ## 换模块时的清单
 
