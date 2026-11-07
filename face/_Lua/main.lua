@@ -63,7 +63,7 @@ local CA_MD5 = "668c79b83142db3a8782313ffe8d8643"
 --   资源尾部追加两段：[capatch.elf 8124][ca.pem 4038]
 local CAP_SIZE, CAP_MD5 = 8060, "f7b4386cd2381a9da22222b8962969fb"
 local CAP_OFF = MODULE_SIZE + CA_SIZE
-local PEM_SIZE, PEM_MD5 = 4038, "f51206b71f8bd8344e593f60137c708d"
+local PEM_SIZE, PEM_MD5 = 5332, "de6ed227f52e4225071226688afc3962"
 local PEM_OFF = CAP_OFF + CAP_SIZE
 local CAP_DIR = "/data/ssl"
 local CAP_DST = CAP_DIR .. "/capatch.elf"
