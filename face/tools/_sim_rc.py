@@ -323,7 +323,7 @@ def case_res_len():
     ok("resource read failed" in st, "A9 长度不符时报 resource read failed", st[:90])
     # A10：长度正确 ⇒ 不得再报那句
     fs2 = dict(BASE)
-    fs2["/res/shellpp_ii-3.101.043.bin"] = "X" * (75112 + 223684 + 8060 + 4038)
+    fs2["/res/shellpp_ii-3.101.043.bin"] = "X" * (75112 + 223684 + 8060 + 5332)
     lua2 = new_rt(fs2); g2 = lua2.globals(); g2.press("1 加载模块")
     st2 = str(g2.LAST_STATUS or "")
     ok("resource read failed" not in st2, "A10 长度正确时不再报该错", st2[:90])
